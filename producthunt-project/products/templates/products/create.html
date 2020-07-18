@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{%block content%}
+<body>
+	<br>
+	<div class="content" style="padding-bottom: 50px;">
+		<h1>Create</h1>
+		<form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+			{% csrf_token %}
+			{{Error}} <br>
+			Title : <br> <input type="text" name="title"style=" border-color:black; padding: 10px; width:300px"> <br> <br>
+			<br>
+			Body :<br> <input type="text-box" name="body" height="20px" width="35px" style=" border-color:black; padding: 10px; width:300px;"> <br> <br>
+			<span style="color: black"></span> <br>
+			Url : <br> <input type="text" name="url" style=" border-color:black; padding: 10px; width:300px;"><br> <br>
+			Icon : <br> <input type="file" name="icon" placeholder="icon" style=" border-color:black; padding: 10px; width:300px; "> <br> <br>  
+			Image : <br><input type="file" name="image" placeholder="Image" style=" border-color:black; padding: 10px; width:300px; "> <br>  <br>
+			<input type="submit" name="Submit" value="Upload" style="padding: 7px; width: 100px;border-radius: 7px; color: #0abde3; border-color: #48dbfb;background-color: white">
+		</form>
+	<div>
+</body>
+{%endblock%}

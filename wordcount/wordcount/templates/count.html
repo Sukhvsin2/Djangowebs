@@ -1,0 +1,12 @@
+<h1>Counted</h1>
+<a href="{% url 'home' %}">Home</a>
+<br>
+<a href="{% url 'about' %}">About Us</a>
+<h1>Entered Text</h1>
+{{ text }} <br>
+Total Words : {{ words_len }} <br>
+Total Characters : {{ char_len }} <br>
+Words repetition : {% for word,value in word_dic %}
+{{word}} = {{value}}
+<br>
+{% endfor %}

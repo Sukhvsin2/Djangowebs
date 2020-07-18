@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{%block content%}
+<body>
+	<br>
+	<h2>Signup</h2>
+	<br>
+	<br>
+	<div class="content" style="background-color:#f3a683 ;color:white;padding:50px;border-radius: 50px;">
+		<h2 style="margin-bottom: 20px; padding-left:250px;">CREATE YOUR ACCOUNT</h2>
+		<form method="POST" action="{% url 'signup' %}" style="padding-left:280px;">
+			{% csrf_token %}
+			{{NameError}} <br>
+			<input type="text" name="UserName" placeholder="UserName" style="border-radius: 3; border-color:black; padding: 10px; border-radius: 7px"> <br> <br>
+			<br>
+			<input type="password" name="Password" placeholder="Password" style="border-radius: 3; border-color:black; padding: 10px;  border-radius: 7px"> <br> <br>
+			<span style="color: black">{{ Error }}</span> <br>
+			<input type="password" name="ConfirmPassword" placeholder="Confirm Password" style="border-radius: 3; border-color:black; padding: 10px;border-radius: 7px"> <br> <br>
+
+			<input type="submit" name="Submit" value="Signup" style="padding: 7px; width: 100px;">
+
+		</form>
+	<div>
+</body>
+{%endblock%}
