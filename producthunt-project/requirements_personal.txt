@@ -15,7 +15,7 @@ geojson==2.4.1
 google-search==1.0.2
 Google-Search-API==1.1.14
 googleapis-common-protos==1.5.9
-httplib2==0.12.3
+httplib2==0.19.0
 idna==2.8
 itsdangerous==1.1.0
 Jinja2==2.10.1
